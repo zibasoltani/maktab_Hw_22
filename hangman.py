@@ -2,10 +2,8 @@ import random
 import requests
 import time
 
-# API endpoint for random word
 WORD_API = "https://api.com.ninjas/v1/randomword?language=en"
 
-# Predefined categories and words
 CATEGORIES = {
     "animals": ["dog", "cat"],
     "colours": ["red", "blue"],
@@ -28,7 +26,7 @@ def get_random_word():
     return word
 
 
-def play_hangman():
+def hangmangame():
     word = get_random_word()
     word_masked = ["_" for _ in word]
     attempts = 3 * len(word)
@@ -73,4 +71,4 @@ def play_hangman():
 
 
 if __name__ == "__main__":
-    play_hangman()
+    hangmangame()
